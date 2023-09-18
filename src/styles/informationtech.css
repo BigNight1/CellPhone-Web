@@ -1,0 +1,46 @@
+.caja_info{
+    display: flex;
+    align-items: center;
+    height: 600px;
+    margin: 0rem 2rem;
+    max-width: 500px;
+    flex-direction: column;
+}
+
+.img-tec img{
+    margin: 1rem 0rem;
+    border-radius: 10px;
+}
+
+.info{
+    max-width: 300px;
+    padding: 0rem 2rem;
+
+}
+
+.info_tec{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info_tec h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.info_tec span{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.tec_redes_sociales{
+    display: flex;
+}
+
+.tec_redes_sociales img{
+    padding: 0rem 0.5rem;
+    font-size: 15px;
+}
+
+/* primero voy hacer el celular despues el de pantalla  */
