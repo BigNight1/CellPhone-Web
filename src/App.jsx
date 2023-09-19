@@ -1,7 +1,7 @@
 import Header from "./components/header.jsx";
+import Informationtech from "./screens/Informationtech.jsx";
 import Locateus from "./screens/Locateus.jsx";
 import QuestionFre from "./screens/QuestionFre.jsx";
-import Informationtech from "./screens/informationtech.jsx";
 import Carousel from "./screens/slider.jsx";
 
 

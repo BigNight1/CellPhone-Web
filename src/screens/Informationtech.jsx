@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/informationtech.css"
+import {FaTiktok} from "react-icons/fa"
 
 const Informationtech = () => {
   return (
-    <div className="caja_info">
+    <div className="bg-gray-600">
+      <div className="caja-formal">
       <div className="img-tec">
         <img src="/images/tecnico.png" alt="Imagen de Tecnico o algo asi" />
       </div>
@@ -19,11 +21,10 @@ const Informationtech = () => {
         <div>
           <h3>Redes Sociales</h3>
           <div className="tec_redes_sociales">
-            <img src="/images/facebook-64.png" alt="" />
-            <img src="/images/tik-tok-50.png" alt="" />
-            <img src="/images/whatsapp-48.png" alt="" />
+            <FaTiktok/>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

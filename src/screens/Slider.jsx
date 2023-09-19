@@ -15,12 +15,11 @@ const Slider = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className="slider-caja">
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
       autoplay={{
-        delay: 6000,
+        delay: 10000,
         disableOnInteraction: false,
       }}
       pagination={{
@@ -32,23 +31,34 @@ const Slider = () => {
       className="mySwiper py-4"
     >
       <SwiperSlide>
-        <div className="flex items-center justify-center   caja">
-          <img src="/images/celular.png" alt=""  />
+        <div className="flex items-center justify-center ">
+          <div className="slider">
+            <h1>Revisa Nuestro Trabajo</h1>
+            <p>Explora imágenes de trabajos realizados y nuestro local</p>
+            <div className="juxtaposeContainer">
+              <iframe
+                title="Comparación de imágenes"
+                className="juxtaposeIframe"
+                src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2d7e4eaa-5589-11ee-b5be-6595d9b17862"
+                width="100%" 
+              ></iframe>
+            </div>
+          </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className=" flex items-center justify-center  ">
-          <img src="/images/celular2.png" alt=""  />
+          <img src="/images/celular2.png" alt="" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className=" flex items-center justify-center  ">
-          <img src="/images/gato.png" alt=""  />
+          <img src="/images/gato.png" alt="" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className=" flex items-center justify-center  ">
-          <img src="/images/perro.png" alt=""  />
+          <img src="/images/perro.png" alt="" />
         </div>
       </SwiperSlide>
       <div className="autoplay-progress" slot="container-end">
@@ -58,22 +68,7 @@ const Slider = () => {
         <span ref={progressContent}></span>
       </div>
     </Swiper>
-    </div>
   );
 };
 
 export default Slider;
-
-/* <div className={styles.slider}>
-      <h1>Revisa Nuestro Trabajo</h1>
-      <p>Explora imágenes de trabajos realizados y nuestro local</p>
-      <div className={styles.juxtaposeContainer}>
-        <iframe
-          title="Comparación de imágenes"
-          className={styles.juxtaposeIframe}
-          src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2d7e4eaa-5589-11ee-b5be-6595d9b17862"
-          width="100%" /* Ajusta el ancho al 100% */
-//       height="550px"
-//     ></iframe>
-//   </div>
-// </div>
