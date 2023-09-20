@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+.Loca_Box{
+    background-color: #ebe6e0ce;
+}
+
+.Tit_Location h1{
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.Tit_Location{
+    padding: 0.25rem;
+}
+.map_google{
+    display: flex;
+    justify-content: center;
+}
+
+.map_google iframe{
+    border-radius: 10px;
+}
+
+.Customer_Support{
+    font-family: 'Anonymous Pro', monospace;
+}
