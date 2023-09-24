@@ -1,49 +1,99 @@
-.caja-formal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 600px;
-    margin: 0rem 2rem;
-    max-width: 500px;
-    
+/* styles/informationtech.css */
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
 }
 
-
-.img-tec img{
-    margin: 1rem 0rem;
-    border-radius: 10px;
+.info-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  overflow: hidden;
+  margin: 20px;
 }
 
-.info{
-    max-width: 300px;
-    padding: 0rem 2rem;
-
+.info-img {
+  padding: 20px;
+  text-align: center;
 }
 
-.info_tec{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.info-img img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.info_tec h2{
-    font-size: 2rem;
-    font-weight: 700;
+.info-img img:hover {
+  transform: scale(1.1);
 }
 
-.info_tec span{
-    font-size: 1.25rem;
+.info-details {
+  padding: 20px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.highlighted-info {
+  font-size: 16px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.specialization h3,
+.service-quality h3,
+.competitive-prices h3,
+.social-icons h3,
+.consult-us h3,
+.passion h3,
+.tiktok-videos h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  margin-top: 16px;
+}
+
+.social-icons h3{
     font-weight: 500;
 }
 
-.tec_redes_sociales{
-    display: flex;
+.specialization-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
-.tec_redes_sociales img{
-    padding: 0rem 0.5rem;
-    font-size: 15px;
-}
-
-/* primero voy hacer el celular despues el de pantalla  */
+.social-icons {
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  .social-icons h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    margin-right: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; /* Agregamos la transición aquí */
+  }
+  
+  /* Agregamos una regla CSS específica para los íconos cuando el mouse está sobre ellos */
+  .social-icons a:hover {
+    transform: rotate(360deg); /* Gira el ícono 360 grados */
+  }

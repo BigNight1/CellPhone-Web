@@ -1,0 +1,35 @@
+.footer-container {
+  background-color: #181a1c;
+  padding: 10px 0; /* Reduce el padding para dispositivos móviles */
+  text-align: center;
+  color: #898989;
+  font-size: 14px;
+  height: 95px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Copyright {
+  font-weight: 700;
+  margin-bottom: 5px; /* Reduce el margen inferior */
+}
+
+.creador p {
+  font-size: 14px; /* Ajusta el tamaño del texto para dispositivos móviles */
+  margin: 0;
+}
+
+.creador-link {
+  color: #0077b5; /* Color azul típico de LinkedIn */
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+
+.creador-link:hover {
+  color: #00548f; /* Cambia el color al pasar el cursor sobre el enlace */
+}
