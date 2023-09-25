@@ -1,104 +1,135 @@
-import React from 'react';
-import { Disclosure } from '@headlessui/react';
+import React, { useEffect, useState } from "react";
+import BurguerButton from "./BurguerButton.jsx";
+import styled from "styled-components";
 
 const Header = () => {
-  const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
-  ];
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
+  // Agregar o quitar la clase 'no-scroll' al body
+  useEffect(() => {
+    if (clicked) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [clicked]);
+
   return (
     <>
-        <Disclosure as="nav" className="bg-gray-800">
-        {({ open }) => (
-          <>
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div className="relative flex h-16 items-center justify-between">
-                {/* Logo a la izquierda */}
-                <div className="flex items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                </div>
-
-                {/* Botón del menú para pantallas pequeñas a la derecha */}
-                <div className="sm:hidden">
-                  <Disclosure.Button className="text-gray-400 hover:text-white focus:outline-none">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                      </svg>
-                    ) : (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                      </svg>
-                    )}
-                  </Disclosure.Button>
-                </div>
-
-                {/* Menú de navegación en pantallas grandes */}
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={`${
-                          item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                        } rounded-md px-3 py-2 text-sm font-medium`}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Panel de menú para pantallas pequeñas */}
-            <Disclosure.Panel className="sm:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={`${
-                      item.current
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                    } block px-3 py-2 rounded-md text-base font-medium`}
-                    aria-current={item.current ? 'page' : undefined}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
+      <NavContainer>
+        <h2>Armaly</h2>
+        <div className={`links ${clicked ? "active" : ""}`}>
+          <a onClick={handleClick} href="#h">
+            Home
+          </a>
+          <a onClick={handleClick} href="#h">
+            Sobre Mi
+          </a>
+          <a onClick={handleClick} href="#h">
+            Encuentranos
+          </a>
+          <a onClick={handleClick} href="#h">
+            Reparación
+          </a>
+        </div>
+        <div className="burguer">
+          <BurguerButton clicked={clicked} handleClick={handleClick} />
+        </div>
+      <BgDiv className={`initial ${clicked ? " active" : ""}`}></BgDiv>
+      </NavContainer>
     </>
   );
 };
 export default Header;
+
+const NavContainer = styled.nav`
+  h2 {
+    color: #bb1818;
+    font-weight: 700;
+    font-size: 1.5rem;
+    span {
+      font-weight: bold;
+    }
+  }
+  height: 70px;
+  padding: 0.4rem;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.3rem;
+  }
+  .links {
+    position: absolute;
+    top: -700px;
+    left: -2000px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all 0.5s ease;
+    a {
+      color: white;
+      font-size: 2rem;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      position: initial;
+      margin: 0;
+      a {
+        font-size: 1rem;
+        color: white;
+        display: inline;
+      }
+      display: block;
+    }
+  }
+  .links.active {
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    text-align: center;
+    a {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: white;
+    }
+  }
+  .burguer {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+`;
+
+const BgDiv = styled.div`
+  background-color: #222;
+  position: fixed;
+  left: -1000px;
+  top: -1000px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.6s ease;
+  overflow-y: hidden;
+
+  &.active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: hidden;
+  }
+`;

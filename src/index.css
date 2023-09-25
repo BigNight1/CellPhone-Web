@@ -6,3 +6,7 @@ body{
     margin: 0;
     background-color: rgb(216, 222, 228);
 }
+
+.no-scroll {
+    overflow: hidden;
+  }

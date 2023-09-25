@@ -3,7 +3,7 @@ import "../styles/Locateus.css";
 
 const Locateus = () => {
   return (
-    <div className="Locateus-container">
+    <div id="Encuentrenos" className="Locateus-container">
       <div className="Locateus-title">
         <h1>Encuéntranos</h1>
       </div>
