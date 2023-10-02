@@ -2,7 +2,7 @@ export function Alcatel(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={180}
+      width={150}
       height={60}
       viewBox="0 0 322.441 81.48"
       {...props}
@@ -19,7 +19,7 @@ export function Motorola(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={180}
+      width={150}
       height={60}
       viewBox="0 0 264.583 60.613"
       {...props}
@@ -39,7 +39,7 @@ export function Android(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={100}
+      width={110}
       height={90}
       viewBox="0 -0.126 162.421 153.239"
       {...props}
@@ -63,7 +63,7 @@ export function Lg(props) {
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
       id="Layer_1"
-      width={100}
+      width={105}
       height={50}
       x={0}
       y={0}
@@ -488,7 +488,7 @@ export function Samsung(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={180}
+      width={150}
       height={80}
       viewBox="0 0 200.777 66.659"
       {...props}

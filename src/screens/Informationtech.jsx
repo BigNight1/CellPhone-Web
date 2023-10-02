@@ -1,36 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/informationtech.css";
 import { BsFacebook } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const Informationtech = () => {
+  useEffect(()=>{
+    Aos.init()
+  },[])
   return (
-    <div className="info-container">
+    <div className="info-container" id="Informacion">
       <div className="info-card">
         <div className="info-img">
           <img src="/images/tecnico.png" alt="Imagen de Técnico" />
         </div>
         <div className="info-details">
-          <h2 className="name">Martin Armas: Experto en Reparación de Celulares y Laptops</h2>
-          <p className="highlighted-info">
+          <h2 className="name " data-aos="fade-right">Martin Armas: Experto en Reparación de Celulares y Laptops</h2>
+          <p className="highlighted-info"  data-aos="fade-left">
             ¡Bienvenido al mundo de la tecnología con un toque humano! Soy Martin Armas, un apasionado técnico con más de 5 años de experiencia en la reparación de celulares y laptops. Con una serie de certificaciones respaldando mi experiencia, puedo garantizar soluciones confiables y efectivas para todos los problemas que pueda enfrentar su dispositivo.
           </p>
           <div className="specialization">
             <h3>Nuestra Especialidad:</h3>
             <ul className="specialization-list">
-              <li>Reparación de Celulares: Desde pantallas rotas hasta problemas de software, no hay tarea demasiado grande o pequeña para nosotros. Confíe en nosotros para devolverle la vida a su dispositivo.</li>
-              <li>Reparación de Laptops: No importa si su laptop es PC o Mac, tenemos las habilidades necesarias para solucionar cualquier problema que pueda surgir. ¡Su portátil estará funcionando como nuevo en poco tiempo!</li>
+              <li data-aos="fade-left">Reparación de Celulares: Desde pantallas rotas hasta problemas de software, no hay tarea demasiado grande o pequeña para nosotros. Confíe en nosotros para devolverle la vida a su dispositivo.</li>
+              <li data-aos="fade-left">Reparación de Laptops: No importa si su laptop es PC o Mac, tenemos las habilidades necesarias para solucionar cualquier problema que pueda surgir. ¡Su portátil estará funcionando como nuevo en poco tiempo!</li>
             </ul>
           </div>
           <div className="service-quality">
             <h3>Servicio al Cliente de Primera Clase:</h3>
-            <p>
+            <p data-aos="fade-left">
               En nuestro centro de servicio, creemos en la importancia de brindar un servicio excepcional al cliente. Siempre será recibido con una sonrisa y un trato amable. Nuestra misión es hacer que su experiencia de reparación sea lo más conveniente y sin estrés posible.
             </p>
           </div>
           <div className="competitive-prices">
             <h3>Precios Competitivos:</h3>
-            <p>
+            <p data-aos="fade-left">
               Ofrecemos una política de precios justos y transparentes. Antes de comenzar cualquier trabajo, le proporcionaremos un presupuesto detallado para que sepa exactamente a qué atenerse. Sin sorpresas desagradables, solo soluciones asequibles.
             </p>
           </div>
@@ -45,17 +50,17 @@ const Informationtech = () => {
           </div>
           <div className="consult-us">
             <h3>¡Consulte con Nosotros!</h3>
-            <p>
+            <p data-aos="fade-left">
               ¿Tiene algún problema con su dispositivo? No importa cuán complejo parezca, estamos aquí para ayudarlo. ¡Consulte con nosotros y le proporcionaremos una evaluación gratuita para que sepa exactamente qué necesita su dispositivo!
             </p>
           </div>
           <div className="passion">
             <h3>Su Tecnología, Nuestra Pasión:</h3>
-            <p>
+            <p data-aos="fade-left">
               En el mundo actual, la tecnología es esencial. Permítanos ser su socio confiable en la resolución de problemas de tecnología. Su satisfacción es nuestra principal prioridad, y haremos todo lo posible para asegurarnos de que su dispositivo funcione perfectamente.
             </p>
           </div>
-          <p className="final-note">
+          <p className="final-note" data-aos="fade-left">
             No espere más. ¡Confíe en Martin Armas para todas sus necesidades de reparación de celulares y laptops!
           </p>
           <div className="tiktok-videos">

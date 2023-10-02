@@ -22,14 +22,17 @@ const Header = () => {
     <>
       <NavContainer>
         <h2>Armaly</h2>
+        <div className={`logo ${clicked ? "active" : ""}`}  >
+          <img src="/images/Logo.png" alt="" />
+        </div>
         <div className={`links ${clicked ? "active" : ""}`}>
           <a onClick={handleClick} href="#h">
             Home
           </a>
-          <a onClick={handleClick} href="#h">
+          <a onClick={handleClick} href="#Informacion">
             Sobre Mi
           </a>
-          <a onClick={handleClick} href="#h">
+          <a onClick={handleClick} href="#Encuentranos">
             Encuentranos
           </a>
           <a onClick={handleClick} href="#h">
@@ -39,7 +42,7 @@ const Header = () => {
         <div className="burguer">
           <BurguerButton clicked={clicked} handleClick={handleClick} />
         </div>
-      <BgDiv className={`initial ${clicked ? " active" : ""}`}></BgDiv>
+        <BgDiv className={`initial ${clicked ? " active" : ""}`}></BgDiv>
       </NavContainer>
     </>
   );
@@ -47,14 +50,36 @@ const Header = () => {
 export default Header;
 
 const NavContainer = styled.nav`
+  .logo {
+    position: absolute;
+    top: -1000px;
+    transition: all 0.8s ease;
+    img {
+      width: 150px;
+    }
+  }
+
+  .logo.active {
+    display: block;
+    position: relative;
+    top: 12px;
+    left: -10px;
+    z-index: 4;
+    img {
+      width: 150px;
+    }
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
   h2 {
-    color: #bb1818;
+    color: #18bb33;
     font-weight: 700;
     font-size: 1.5rem;
     span {
       font-weight: bold;
     }
   }
+
   height: 70px;
   padding: 0.4rem;
   background-color: #333;
@@ -83,6 +108,7 @@ const NavContainer = styled.nav`
     @media (min-width: 768px) {
       position: initial;
       margin: 0;
+
       a {
         font-size: 1rem;
         color: white;
@@ -103,9 +129,10 @@ const NavContainer = styled.nav`
     z-index: 3;
     text-align: center;
     a {
-      font-size: 2rem;
+      font-family: "Merriweather", serif;
+      font-size: 1.7rem;
       margin-top: 1rem;
-      color: white;
+      color: #000000;
     }
   }
   .burguer {
@@ -116,7 +143,9 @@ const NavContainer = styled.nav`
 `;
 
 const BgDiv = styled.div`
-  background-color: #222;
+  background-image: url("/images/cel.png");
+  background-size: cover;
+  background-position: center;
   position: fixed;
   left: -1000px;
   top: -1000px;

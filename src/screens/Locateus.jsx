@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Locateus.css";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const Locateus = () => {
+  useEffect(()=>{
+    Aos.init({duration: 1000});
+  },[])
   return (
-    <div id="Encuentrenos" className="Locateus-container">
-      <div className="Locateus-title">
+    <div id="Encuentranos" className="Locateus-container">
+      <div className="animate__animated animate__backInLeft Locateus-title">
         <h1>Encuéntranos</h1>
       </div>
       <div className="Map-container">
@@ -19,10 +24,18 @@ const Locateus = () => {
         ></iframe>
       </div>
       <div className="Customer-support">
-        <h2>Atención al Cliente</h2>
-        <p>Lunes a Sábado: 9AM - 8PM</p>
-        <p>Domingo: 10AM - 4PM</p>
-        <p>Tienda 127</p>
+        <div className="atencion_cliente">
+          <div className="color_title">
+            <h2>Atención al Cliente</h2>
+          </div>
+          <p>Lunes a Sábado: 9AM - 8PM</p>
+          <p>Domingo: 10AM - 4PM</p>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          <div className="tienda">
+            <h2>Tienda 127</h2>
+          </div>
+        </div>
       </div>
     </div>
   );

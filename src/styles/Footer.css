@@ -1,10 +1,10 @@
 .footer-container {
   background-color: #181a1c;
-  padding: 10px 0; /* Reduce el padding para dispositivos móviles */
+  padding: 6px 0; 
   text-align: center;
   color: #898989;
-  font-size: 14px;
-  height: 95px;
+  font-size: 15px;
+
 }
 
 .footer-content {
@@ -15,11 +15,12 @@
 
 .Copyright {
   font-weight: 700;
-  margin-bottom: 5px; /* Reduce el margen inferior */
+  margin-bottom: 5px; 
 }
 
 .creador p {
-  font-size: 14px; /* Ajusta el tamaño del texto para dispositivos móviles */
+  font-size: 15px;
+  font-weight: 500; 
   margin: 0;
 }
 
@@ -31,5 +32,5 @@
 }
 
 .creador-link:hover {
-  color: #00548f; /* Cambia el color al pasar el cursor sobre el enlace */
+  color: #00548f; 
 }

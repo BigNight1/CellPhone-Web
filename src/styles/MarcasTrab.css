@@ -38,7 +38,6 @@
 .Caja_Marcas {
     background-color: #f7f7f7; /* Color de fondo */
     border-radius: 10px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombreado */
   }
 
@@ -52,6 +51,7 @@
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 32px;
+  gap: 20px;
   min-height: 60vh;
+  padding: 10px 13px;
 }
