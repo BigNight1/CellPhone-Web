@@ -5,9 +5,8 @@ import Locateus from "./screens/Locateus.jsx";
 import MarcasTrab from "./screens/MarcasTrab.jsx";
 import QuestionFre from "./screens/QuestionFre.jsx";
 import Testimonio from "./screens/Testimonio.jsx";
-import Carousel from "./screens/slider.jsx";
 import "animate.css"
-
+import Carousel from "./screens/Slider.jsx"
 
 function App() {
   return (
