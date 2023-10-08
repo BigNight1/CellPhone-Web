@@ -8,7 +8,7 @@ const Footer = () => {
         <span className="Copyright">
           &copy; 2023 ARMALY. Todos los derechos reservados.
         </span>
-        <div className="creador">
+        {/* <div className="creador">
           <p>
             Creado por:{" "}
             <a
@@ -19,7 +19,7 @@ const Footer = () => {
               Edu Armas
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

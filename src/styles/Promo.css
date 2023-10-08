@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&display=swap");
+
+.Promo_Caja {
+  background-color: #ddeeb6;
+  color: #14344c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Caja_Descuento {
+  padding: 20px 0;
+}
+
+.Caja_Descuento h1 {
+  font-size: 60px;
+  line-height: 1.6;
+  font-weight: 900;
+}
+
+.Caja_Descuento span {
+  font-size: 30px;
+  line-height: 0;
+  font-weight: 700;
+}
+
+.acercate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 25px;
+}
+
+.acercate p {
+  font-size: 22px;
+  font-family: "Kanit", sans-serif;
+}
+
+.nossigues p {
+  font-size: 22px;
+  font-family: "Kanit", sans-serif;
+}
+
+.bannertik{
+  border-radius: 10px;
+  margin: 10px 0px;
+}

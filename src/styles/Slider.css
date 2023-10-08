@@ -1,5 +1,10 @@
-.mySwiper{
-  height: 650px;
+.back{
+  background-color: #333;
+  padding: 10px 5px;
+}
+
+.mySwiper {
+  height: 400px;
 }
 
 .slider {
@@ -19,10 +24,30 @@
   color: #777;
 }
 
-.juxtaposeIframe {
-  width: 100%;
-  height: 300px;
-  border: none;
+.centrar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.centrar img {
+  border-radius: 5px;
+}
+
+.cam {
+  border: 3px solid black;
+}
+
+.cam h1 {
+  color: #cf2424;
+  font-size: 35px;
+  display: grid;
+  place-content: center;
+  line-height: 38px;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 5px;
+  
 }
 
 /* SWIPER STYLE */

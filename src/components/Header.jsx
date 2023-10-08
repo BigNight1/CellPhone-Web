@@ -21,13 +21,14 @@ const Header = () => {
   return (
     <>
       <NavContainer>
-        <h2>Armaly</h2>
-        <div className={`logo ${clicked ? "active" : ""}`}  >
-          <img src="/images/Logo.png" alt="" />
-        </div>
+        <img
+          src="/images/ArmalyLogo.png"
+          alt="Logo_Armaly"
+          className="logo_armaly"
+        />
         <div className={`links ${clicked ? "active" : ""}`}>
           <a onClick={handleClick} href="#h">
-            Home
+            Inicio
           </a>
           <a onClick={handleClick} href="#Informacion">
             Sobre Mi
@@ -50,33 +51,23 @@ const Header = () => {
 export default Header;
 
 const NavContainer = styled.nav`
+  .logo_armaly {
+    height: 50px;
+    border-radius: 50%;
+  }
   .logo {
     position: absolute;
     top: -1000px;
     transition: all 0.8s ease;
-    img {
-      width: 150px;
-    }
   }
 
   .logo.active {
     display: block;
     position: relative;
-    top: 12px;
-    left: -10px;
+    top: 20px;
     z-index: 4;
     img {
-      width: 150px;
-    }
-  }
-
-  @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
-  h2 {
-    color: #18bb33;
-    font-weight: 700;
-    font-size: 1.5rem;
-    span {
-      font-weight: bold;
+      height: 80px;
     }
   }
 
@@ -129,10 +120,11 @@ const NavContainer = styled.nav`
     z-index: 3;
     text-align: center;
     a {
-      font-family: "Merriweather", serif;
+      font: inherit;
+      font-weight: 700;
       font-size: 1.7rem;
-      margin-top: 1rem;
-      color: #000000;
+      margin: 1rem;
+      color: #ffffff;
     }
   }
   .burguer {
@@ -143,7 +135,7 @@ const NavContainer = styled.nav`
 `;
 
 const BgDiv = styled.div`
-  background-image: url("/images/cel.png");
+  background-image: url("/images/cel1.png");
   background-size: cover;
   background-position: center;
   position: fixed;

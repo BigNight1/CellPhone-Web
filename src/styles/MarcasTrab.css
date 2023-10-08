@@ -35,15 +35,9 @@
 }
 
 
-.Caja_Marcas {
-    background-color: #f7f7f7; /* Color de fondo */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombreado */
-  }
 
 .marcas {
   background-color: white;
-  border-radius: 10px;
 }
 
 .marca {

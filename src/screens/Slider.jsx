@@ -15,11 +15,17 @@ const Slider = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
+    <div className="back">
+      <div className="cam">
+        <h1>
+          Nuestros <span>Trabajos</span>
+        </h1>
+      </div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 10000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -31,34 +37,23 @@ const Slider = () => {
         className="mySwiper py-4"
       >
         <SwiperSlide>
-          <div className="flex items-center justify-center ">
-            <div className="slider">
-              <h1>Revisa Nuestro Trabajo</h1>
-              <p>Explora imágenes de trabajos realizados y nuestro local</p>
-              <div className="juxtaposeContainer">
-                <iframe
-                  title="Comparación de imágenes"
-                  className="juxtaposeIframe"
-                  src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2d7e4eaa-5589-11ee-b5be-6595d9b17862"
-                  width="100%"
-                ></iframe>
-              </div>
-            </div>
+          <div className="centrar">
+            <img src="/images/XIAOMI.gif" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" flex items-center justify-center  ">
-            <img src="/images/celular2.png" alt="" />
+          <div className="centrar">
+            <img src="/images/XIAOMI.gif" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" flex items-center justify-center  ">
-            <img src="/images/gato.png" alt="" />
+          <div className="centrar">
+            <img src="/images/XIAOMI.gif" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" flex items-center justify-center  ">
-            <img src="/images/perro.png" alt="" />
+          <div className=" centrar">
+            <img src="/images/XIAOMI.gif" alt="" />
           </div>
         </SwiperSlide>
         <div className="autoplay-progress" slot="container-end">
@@ -68,6 +63,7 @@ const Slider = () => {
           <span ref={progressContent}></span>
         </div>
       </Swiper>
+    </div>
   );
 };
 
