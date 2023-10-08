@@ -25,7 +25,7 @@ function App() {
       {/* <QuestionFre /> */}
       <Promo/>
       <Locateus />
-      <Comentarios/>
+      {/* <Comentarios/> */}
       <Footer />
     </div>
   );
