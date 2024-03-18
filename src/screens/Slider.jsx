@@ -7,6 +7,24 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
 
+const Imagenes = [
+  {
+    id: 1,
+    name: "reparacion",
+    img: "images/XIAOMI.gif",
+  },
+  {
+    id: 2,
+    name: "reparacion",
+    img: "/images/XIAOMI.gif",
+  },
+  {
+    id: 3,
+    name: "reparacion",
+    img: "/images/XIAOMI.gif",
+  },
+];
+
 const Slider = () => {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
@@ -15,54 +33,46 @@ const Slider = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className="back">
-      <div className="cam">
-        <h1>
-          Nuestros <span>Trabajos</span>
-        </h1>
-      </div>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper py-4"
-      >
-        <SwiperSlide>
-          <div className="centrar">
-            <img src="/images/XIAOMI.gif" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="centrar">
-            <img src="/images/XIAOMI.gif" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="centrar">
-            <img src="/images/XIAOMI.gif" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className=" centrar">
-            <img src="/images/XIAOMI.gif" alt="" />
-          </div>
-        </SwiperSlide>
-        <div className="autoplay-progress" slot="container-end">
-          <svg viewBox="0 0 48 48" ref={progressCircle}>
-            <circle cx="24" cy="24" r="20"></circle>
-          </svg>
-          <span ref={progressContent}></span>
+    <div>
+      <div className="back">
+        <div className="cam">
+          <h1>
+            Nuestros <span>Trabajos</span>
+          </h1>
         </div>
-      </Swiper>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          onAutoplayTimeLeft={onAutoplayTimeLeft}
+          className="mySwiper py-4"
+        >
+          {Imagenes.map((image) => {
+            return(
+              <SwiperSlide key={image.id}>
+              <div className="h-full flex items-center justify-center" >
+                <img src={image.img} alt={image.name}  />
+              </div>
+            </SwiperSlide>
+            )
+            
+          })}
+          <div className="autoplay-progress" slot="container-end">
+            <svg viewBox="0 0 48 48" ref={progressCircle}>
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span ref={progressContent}></span>
+          </div>
+        </Swiper>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .back{
-  background-color: #333;
+  /* background-color: #333; */
   padding: 10px 5px;
 }
 
@@ -24,19 +24,14 @@
   color: #777;
 }
 
-.centrar {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 
 .centrar img {
   border-radius: 5px;
 }
 
-.cam {
+/* .cam {
   border: 3px solid black;
-}
+} */
 
 .cam h1 {
   color: #cf2424;

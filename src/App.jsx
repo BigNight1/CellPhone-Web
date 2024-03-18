@@ -11,22 +11,24 @@ import Promo from "./screens/Promo.jsx";
 import Workvideo from "./screens/Workvideo.jsx";
 import "animate.css";
 import Comentarios from "./screens/Comentarios.jsx";
+import Servicios from "./screens/Servicios.jsx";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-white">
       <Header />
-      <ServicioTec />
-      <MarcasTrab />
-      <Carousel />
-      <Workvideo/>
-      <Informationtech />
-      <Testimonio />
-      {/* <QuestionFre /> */}
-      <Promo/>
-      <Locateus />
-      {/* <Comentarios/> */}
-      <Footer />
+        <ServicioTec />
+        {/* <MarcasTrab /> */}
+        <Servicios/>
+        <Carousel />
+        <Informationtech />
+        {/* <Workvideo /> */}
+        <Testimonio />
+        {/* <QuestionFre /> */}
+        <Locateus />
+        <Promo />
+        {/* <Comentarios/> */}
+        <Footer />
     </div>
   );
 }

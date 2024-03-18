@@ -1,0 +1,13 @@
+@media (min-width: 768px){
+    .Links_pant_Gran{
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 768px){
+    .Links_pant_Gran{
+        display: none;
+    }
+}

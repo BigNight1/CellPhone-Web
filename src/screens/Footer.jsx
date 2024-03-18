@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <span className="Copyright">
-          &copy; 2023 ARMALY. Todos los derechos reservados.
+          &copy; 2024 ARMALYCELL
         </span>
         {/* <div className="creador">
           <p>
